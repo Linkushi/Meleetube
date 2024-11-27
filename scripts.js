@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_YOUTUBE_API_KEY';
+const apiKey = 'AIzaSyDnFIUjvKjooiDtWzYEDz3nAKO25jgaZlQ';
 const searchForm = document.getElementById('searchForm');
 const resultsSection = document.getElementById('results');
 
