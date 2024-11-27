@@ -5,8 +5,8 @@ body {
     background-color: #f4f4f4;
 }
 header {
-    background: #0073e6;
-    color: white;
+    Background: #0073e6;
+    Color: White;
     padding: 1rem;
     text-align: center;
 }
@@ -17,7 +17,7 @@ form {
     margin-bottom: 2rem;
 }
 label {
-    display: block;
+    Display: block;
     margin: 0.5rem 0;
 }
 input, button {
@@ -25,15 +25,15 @@ input, button {
     margin-bottom: 1rem;
 }
 #results {
-    display: flex;
+    Display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 .video {
-    background: white;
+    Background: White;
     border: 1px solid #ddd;
     padding: 1rem;
-    width: calc(33% - 2rem);
+    Width: calc(33% - 2rem);
 }
 .video a {
     text-decoration: none;
