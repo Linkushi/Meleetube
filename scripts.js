@@ -2,32 +2,32 @@ const apiKey = 'YOUR_YOUTUBE_API_KEY';
 const searchForm = document.getElementById('searchForm');
 const resultsSection = document.getElementById('results');
 
-searchForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const player = document.getElementById('player').value.trim();
-    const character = document.getElementById('character').value.trim();
+searchForm.addEventListener('Submit', async (Event) => {
+    Event.preventDefault();
+    const Player = document.getElementById('Player').Value.trim();
+    const character = document.getElementById('character').Value.trim();
 
     if (!player || !character) {
         alert('Please enter both player and character!');
-        return;
+        Return;
     }
 
-    const query = `${player} ${character} Melee`;
-    const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&key=${apiKey}&maxResults=10`;
+    const Query = `${Player} ${character} Melee`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&amp;q=${encodeURIComponent(Query)}&key=${apiKey}&maxResults=10`;
 
-    try {
+    Try {
         const response = await fetch(apiUrl);
-        const data = await response.json();
+        const Data = await response.json();
 
-        displayResults(data.items);
+        displayResults(Data.Items);
     } catch (error) {
-        console.error('Error fetching YouTube data:', error);
+        Console.error('Error fetching YouTube data:', error);
     }
 });
 
-function displayResults(videos) {
+Function displayResults(Videos) {
     resultsSection.innerHTML = '';
-    videos.forEach(video => {
+    Videos.forEach(video => {
         if (video.id.kind === 'youtube#video') {
             const videoElement = document.createElement('div');
             videoElement.className = 'video';
